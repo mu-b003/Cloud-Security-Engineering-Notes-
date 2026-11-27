@@ -1,3 +1,4 @@
+
 # Symmetric and Asymmetric Encryption
 
 Encryption is one of the most important foundations of cybersecurity and cloud security architecture because it helps protect data from unauthorized access whether it is stored on servers or in databases or transmitted across networks and the internet.
@@ -9,11 +10,11 @@ Encryption is divided into two types based on the use of keys:
 
 ---
 
-## 1. Symmetric Encryption
+# 1. Symmetric Encryption
 
 It is a type of encryption that uses a single encryption key to encrypt and decrypt data. In simpler terms, the person encrypting the data and the person who wants to read it must use the same key.
 
-### How Does Symmetric Encryption Work?
+## How Does Symmetric Encryption Work?
 
 The process takes place in three stages:
 
@@ -21,58 +22,48 @@ The process takes place in three stages:
 2. **Encryption:** Using a secret key and encryption algorithm to transform the data into unintelligible data.
 3. **Ciphertext:** The data after encryption, which cannot be read until it is decrypted.
 
-**Plaintext**
+### Encryption Process
 
-`Hello Bob`
+| Stage | Description |
+|---|---|
+| Plaintext | `Hello Bob` |
+| Encryption | Secret Key |
+| Ciphertext | `X7#kP9@mL2` |
+| Decryption | The same secret key |
+| Original Plaintext | `Hello Bob` |
 
-**Encryption**
+## The Most Important Symmetric Encryption Algorithms
 
-Secret Key
+### 1. Advanced Encryption Standard (AES)
 
-**Ciphertext**
+It uses a single secret key and supports key lengths of 128, 192, and 256 bits. It also provides strong protection when used with the correct settings and is used to encrypt files, databases, and stored data.
 
-`X7#kP9@mL2`
+### 2. Data Encryption Standard (DES)
 
-**Decryption**
+Using a 56-bit key has become insecure due to the key's short length and is not recommended for use in modern systems.
 
-The same secret key
+### 3. Triple DES (3DES)
 
-**Original Plaintext**
+It offers better protection, but slower than AES, which has become outdated and neglected in modern applications.
 
-`Hello Bob`
+### 4. ChaCha20
 
-### The Most Important Symmetric Encryption Algorithms
+It provides good performance on many devices and is also suitable for devices that do not have hardware acceleration for AES (Advanced Encryption Standard).
 
-1. **Advanced Encryption Standard (AES)**
-
-   It uses a single secret key and supports key lengths of 128, 192, and 256 bits. It also provides strong protection when used with the correct settings and is used to encrypt files, databases, and stored data.
-
-2. **Data Encryption Standard (DES)**
-
-   Using a 56-bit key has become insecure due to the key's short length and is not recommended for use in modern systems.
-
-3. **Triple DES (3DES)**
-
-   It offers better protection, but slower than AES, which has become outdated and neglected in modern applications.
-
-4. **ChaCha20**
-
-   It provides good performance on many devices and is also suitable for devices that do not have hardware acceleration for AES (Advanced Encryption Standard).
-
-### Advantages of Symmetric Encryption
+## Advantages of Symmetric Encryption
 
 - Very fast compared to asymmetric encryption.
 - Used for encrypting large amounts of data.
 - Requires fewer computing resources.
 - Widely used in data storage and transmission.
 
-### Disadvantages of Symmetric Encryption
+## Disadvantages of Symmetric Encryption
 
 - Key distribution is a problem; the key must be delivered to the other party securely.
-- If an attacker steals the key, they can decrypt all the data protected by that key.
+- If an attacker steals the key they can decrypt all the data protected by that key.
 - Key management becomes complicated when there are a large number of users and systems.
 
-### Encryption Is Used in Many Cloud Services
+## Encryption Is Used in Many Cloud Services
 
 1. Encrypting files stored on Amazon S3.
 2. Database encryption.
@@ -82,7 +73,7 @@ The same secret key
 
 ---
 
-## 2. Asymmetric Encryption
+# 2. Asymmetric Encryption
 
 It is a type of encryption that uses two different keys mathematically related to each other instead of a single secret key. These two keys are:
 
@@ -91,64 +82,64 @@ It is a type of encryption that uses two different keys mathematically related t
 
 Each user has two key pairs: a public key which can be shared with others and a private key which must remain secret. These two keys are used to encrypt and decrypt data as well as for digital signatures and verification.
 
-### How Does Asymmetric Encryption Work?
+## How Does Asymmetric Encryption Work?
 
 Let's assume Mubarak wants to send a secret message to Siddhar.
 
-**1. Creating the Key at the Recipient's End**
+### 1. Creating the Key at the Recipient's End
 
 - Siddhar, the person receiving the message, has two keys linked together.
 - The public key can be obtained by anyone and used to decrypt the message.
 - The private key is kept by Siddhar for himself and is not shared with anyone.
 
-**2. Public Key Sharing**
+### 2. Public Key Sharing
 
-Siddhar sends his public key to Mubarak over the internet. Even if hackers intercept it, it doesn't matter because this key is used for encryption only and cannot be decrypted.
+Siddhar sends his public key to Mubarak over the internet even if hackers intercept it, it doesn't matter because this key is used for encryption only and cannot be decrypted.
 
-**3. Message Encryption at the Sender's End**
+### 3. Message Encryption at the Sender's End
 
-Mubarak writes his secret message, then uses Siddhar's public key to lock and encrypt it, converting it into incomprehensible symbols. Once it is locked, even Mubarak himself cannot unlock it again.
+Mubarak writes his secret message, then uses Siddhar's public key to lock and encrypt it, converting it into incomprehensible symbols once it is locked even Mubarak himself cannot unlock it again.
 
-**4. Sending the Encrypted Message**
+### 4. Sending the Encrypted Message
 
 Mubarak sends the coded message to Siddhar.
 
-**5. Decryption at the Receiver**
+### 5. Decryption at the Receiver
 
 Siddhar receives the message and uses his unique key which no one else possesses to unlock it and safely read the secret message.
 
-### The Most Important Asymmetric Encryption Algorithms
+## The Most Important Asymmetric Encryption Algorithms
 
-1. **RSA (Rivest–Shamir–Adleman)**
+### 1. RSA (Rivest–Shamir–Adleman)
 
-   One of the most famous asymmetric encryption algorithms. Two pairs of keys are used to encrypt small data sets, or encryption keys, and are used in digital signatures.
+One of the most famous asymmetric encryption algorithms Two pairs of keys are used to encrypt small data sets, or encryption keys, and are used in digital signatures.
 
-2. **ECC (Elliptic Curve Cryptography)**
+### 2. ECC (Elliptic Curve Cryptography)
 
-   Elliptic curve-based encryption technology provides a stronger encryption level suitable for devices with fewer resources, used in secure communications and digital signatures.
+Elliptic curve-based encryption technology provides a stronger encryption level suitable for devices with fewer resources, used in secure communications and digital signatures.
 
-3. **ECDSA (Elliptic Curve Digital Signature Algorithm)**
+### 3. ECDSA (Elliptic Curve Digital Signature Algorithm)
 
-   An algorithm used to create and verify digital signatures; its primary function is not to encrypt messages, but to verify that the signature originates from the owner of the private key and that the data has not been altered.
+An algorithm used to create and verify digital signatures; its primary function is not to encrypt messages, but to verify that the signature originates from the owner of the private key and that the data has not been altered.
 
-4. **Ed25519**
+### 4. Ed25519
 
-   A modern digital signature algorithm based on elliptic curves is used in digital signatures, identity verification systems, software authentication systems, and SSH.
+A modern digital signature algorithm based on elliptic curves is used in digital signatures, identity verification systems, software authentication systems, and SSH.
 
-### Advantages of Asymmetric Encryption
+## Advantages of Asymmetric Encryption
 
 - It does not require sharing a private key.
 - Facilitates public key distribution.
 - Supports digital signatures.
 - Simplifies party verification when using trusted digital certificates.
 
-### Disadvantages of Asymmetric Encryption
+## Disadvantages of Asymmetric Encryption
 
 - It is slower compared to symmetric encryption.
-- Requires more computing resources.
+- Also requires more computing resources.
 - Necessitates managing and protecting private keys.
 
-### Uses of Asymmetric Encryption
+## Uses of Asymmetric Encryption
 
 - Secure exchange of encryption keys.
 - SSL/TLS certificates.
